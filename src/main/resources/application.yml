@@ -1,0 +1,22 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    mysql:
+      ConnectionTestQuery: SELECT 1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.30.11.5:3306/db3?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: 123456
+    oracle:
+      ConnectionTestQuery: SELECT 1 from dual
+      driver-class-name: oracle.jdbc.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@172.30.11.4:1521:orcl
+      username: fxjc
+      password: fxjc
+    type: com.zaxxer.hikari.HikariDataSource
+mybatis:
+  type-aliases-package: com.example.multidata.po
+
